@@ -1,0 +1,182 @@
+<!--homepage.html-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+       <meta charset="UTF-8">
+    <title>Registration and Login System</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+     <style type="text/css">
+     
+     	body{
+     		
+     	}
+     	.navbar{
+     		background-color:#1056a775;
+
+     	}
+     	.navbar-brand{
+     		font-size: 200%;
+     		font-family: Times New Roman;
+     		font-weight: bolder;
+     		color: white;
+     	}
+     	.nav-link{
+     		font-size:130%;
+     		color: white;
+     	}
+	.homeback h1{
+		color: white;
+		padding-top: 35vh;
+		font-size:700%;
+		text-align: center;
+	}
+	.userback{
+ 		height: 50vh;
+    background-image:url('images/serv2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    text-align: center;
+    padding-top: 40vh;
+ 	}
+	.userback h1{
+		color: white;
+		padding-top: 2vh;
+		font-size:300%;
+		text-align: left;
+	}
+	.userback p{
+	color: white;
+	}
+	.userback h3{
+	color: white;
+	font-size:200%;
+	}
+.service{
+	display: flex;
+	width: 100%;
+
+}
+.serv{
+    flex-basis: 45%;
+    margin-bottom: 5%;
+}
+.serv img{
+	padding:10%;
+    width: 100%;
+    height: 100%;
+}
+	.row{
+    flex-basis: 30%;
+    margin-bottom: 5%;
+       margin:1em;
+}
+.row img{
+	padding-left:40%;
+    width: 50%;
+    height: 10%;
+   
+}
+#pic-array{
+ 
+    display: flex;
+    width: 100%;
+}
+.row p{
+	padding:10%;
+	 color:rgba(29, 78, 205, 0.76);
+	 text-align: center;
+}
+.row h4{
+	text-align: center;
+}
+.fa-solid{
+ size: 200%;
+}
+     </style>    
+       
+</head>
+<body>
+        
+   <p sec:authorize="hasRole('USER')">      
+        
+        <nav class="navbar">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">HAY TECH</a>
+      
+      
+        <!-- Navbar links -->
+       
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{|/dashboard|}" th:text="'Home'">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{|/register|}" th:text="'About Us'">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{|/|}" th:text="'Services'">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{|/login|}" th:text="'Contact'">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{|/register|}" th:text="'Registers'">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{|/logout|}" th:text="'Logout'">Log Out</a>
+            </li>
+          </ul>
+      </nav>
+      
+      
+       <div class="userback">
+        	<h3>Grow Your Business with Mobile App</h3>
+        	<p>Andriod Mobile App | IOS Mobile App | Windows Mobile App</p>
+        </div>
+        
+        <div class="service">
+        	<div class="serv">
+        		<img src="images/serv3.png" alt="">
+        	</div>
+        	<div class="serv">
+        	<h3>Static Website</h3>
+        	<h3>Dynamic Website</h3>
+        	</div>
+        	
+        	</div>
+        	
+        	    <div id="pic-array">
+            <div class="row">
+          <i class="fa-solid fa-laptop-code"></i><br>
+             <h4>UI Designing</h4>
+                <p>Donec vitae vehicula massa, vitae dignissim felis. Sed euismod tincidunt laoreet. Donec risus magna, vehicula non imperdiet nec, lacinia sit amet neque.</p>
+            </div>
+            <div class="row">
+             <img src="images/ui.png" alt="">
+             <h4>UI Designing</h4>
+                <p>Donec vitae vehicula massa, vitae dignissim felis. Sed euismod tincidunt laoreet. Donec risus magna, vehicula non imperdiet nec, lacinia sit amet neque.</p>
+            </div>
+             <div class="row">
+             <img src="images/ui.png" alt="">
+             <h4>UI Designing</h4>
+                <p>Donec vitae vehicula massa, vitae dignissim felis. Sed euismod tincidunt laoreet. Donec risus magna, vehicula non imperdiet nec, lacinia sit amet neque.</p>
+            </div>
+           <div class="row">
+             <img src="images/ui.png" alt="">
+             <h4>UI Designing</h4>
+                <p>Donec vitae vehicula massa, vitae dignissim felis. Sed euismod tincidunt laoreet. Donec risus magna, vehicula non imperdiet nec, lacinia sit amet neque.</p>
+            </div>
+            <div class="row">
+             <img src="images/ui.png" alt="">
+             <h4>UI Designing</h4>
+                <p>Donec vitae vehicula massa, vitae dignissim felis. Sed euismod tincidunt laoreet. Donec risus magna, vehicula non imperdiet nec, lacinia sit amet neque.</p>
+            </div>
+       
+       
+</body>
+</html>
